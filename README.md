@@ -1,5 +1,5 @@
 # GenAI
-**House Price Prediction**
+*******************House Price Prediction*******************
 
 **Blue scatter points** → Actual data points from our dataset.
 
