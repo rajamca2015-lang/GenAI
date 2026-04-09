@@ -3,7 +3,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.utils import plot_model
 
-# Load the dataset 
+# Load the dataset (pima.csv DataSet available in this same github link)
 df = pd.read_csv("pima.csv")
 
 X = df.drop("Outcome", axis=1) 
