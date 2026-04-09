@@ -5,7 +5,7 @@ from sklearn.linear_model import LinearRegression
 import numpy as np
 from sklearn.metrics import r2_score, mean_squared_error
 
-# Dataset
+# Dataset (Example DataSet)
 data = {
     "TV": [230.1, 44.5, 17.2, 151.5, 180.8, 8.7, 57.5, 120.2, 144.1, 111.6],
     "Radio": [37.8, 39.3, 45.9, 41.3, 10.8, 48.9, 32.8, 19.6, 16.0, 12.6],
@@ -19,7 +19,7 @@ X = df[["TV", "Radio", "Newspaper"]]
 y = df["Sales"]
 model = LinearRegression().fit(X, y)
 
-# --- Scatter plots with regression lines ---
+# Scatter plots with regression lines
 fig, axes = plt.subplots(1, 3, figsize=(18, 5))
 
 for idx, feature in enumerate(["TV", "Radio", "Newspaper"]):
@@ -41,7 +41,6 @@ print("Coefficients:", model.coef_)
 print("R² Score:", r2_score(y, y_pred))
 print("Mean Squared Error:", mean_squared_error(y, y_pred))
 
-# Residuals
 residuals = y - y_pred
 
 # --- Residual Plot ---
